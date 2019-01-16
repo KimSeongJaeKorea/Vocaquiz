@@ -1,5 +1,6 @@
 import collections
 import time
+from error_checking import *
 
 print('voca_test.py')
 print('made by seongjae KIM')
@@ -27,8 +28,12 @@ for i in range(len(save_position)):
         
 
 print('please refer manual posted on GITHUB \n')
-testdate = input('What is todays date\n')
-howmany = input('how many words?\n')
-cutline = input('minimum score to pass? please write percentage\n')
-testmode = input('Please choose mode for test. Review mode is 0. And new word training mode is 1 \n')
-automode = input('Would you use auto-grading or not? auto mode is 0. manual mode is 1.')
+testdate = int(input('What is todays date\n'))
+howmany = int(input('how many words?\n'))
+cutline = int(input('minimum score to pass? please write percentage\n'))
+testmode = int(input('Please choose mode for test. Review mode is 0. And new word training mode is 1 \n'))
+automode = int(input('Would you use auto-grading or not? auto mode is 0. manual mode is 1.'))
+
+error_testc(testdate,save_position,testmode,howmany,DBDtext,text,cutline)
+
+f.close()
