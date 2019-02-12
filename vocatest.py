@@ -42,7 +42,7 @@ if testmode == 1:
             # 수정할 것 : duplication
             duplication = 1
             ranint = random.randrange(1,len(DBDtext[testdate]))
-            while duplication== 0:
+            while duplication== 1:
                   ranint = random.randrange(1,len(DBDtext[testdate]))
                   duplication = 0
                   for k in range(len(problemset)):
